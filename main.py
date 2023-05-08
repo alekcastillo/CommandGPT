@@ -73,7 +73,7 @@ def main(args):
     command = None
 
     while (generating):
-        summary = _find_command_with_gpt(os_name, running_terminal, command_description)
+        summary = _find_command_with_gpt(os_name, running_terminal, command_description, command)
         command = summary.get("choices")[0].get("message").get("content").strip().replace('`', '')
 
         print(f"Found the following command: {command}")
