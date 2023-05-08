@@ -56,7 +56,7 @@ def _get_terminal_command_flag(os_name: str, terminal: str):
         return "-c"
 
     if terminal == "cmd":
-        return "/G"
+        return "/C"
 
     return ""
 
